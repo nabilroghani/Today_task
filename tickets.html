@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tickets</title>
+</head>
+
+<body>
+
+
+  <script>
+    let amount = parseInt(prompt("Enter your amount"));
+    let maleOrFemale = prompt("Enter Gender");
+    let age = +prompt("Enter Age");
+    if (amount >= 10000 && maleOrFemale === "male" && age >= 18) {
+      alert("Goto The VIP Enclosure (Male)");
+    }
+    else if (amount >= 10000 && maleOrFemale === "female" && age >= 18) {
+      alert("Goto The VIP Enclosure (Female)");
+    }
+    else {
+      alert("You Are Not Allowed");
+    }
+
+  </script>
+</body>
+
+</html>
