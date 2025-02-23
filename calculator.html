@@ -11,7 +11,29 @@
 
 
   <script>
-
+    let num1 = parseInt(prompt("Enter First Number:"));
+    let operator = prompt("Give operator sign (/, +, -, *, %, **)");
+    let num2 = parseInt(prompt("Enter 2nd Number:"));
+    let total;
+    if (operator === "+") {
+      total = num1 + num2;
+    }
+    else if (operator === "-") {
+      total = num1 - num2;
+    }
+    else if (operator === "*") {
+      total = num1 * num2;
+    }
+    else if (operator === "/") {
+      total = num2 !== 0 ? num1 / num2 : "Cannot divide by zero";
+    }
+    else if (operator === "**") {
+      total = num1 ** num2;
+    }
+    else if (operator === "%") {
+      total = num1 % num2;
+    }
+    alert(`Total is ${total}`);
   </script>
 </body>
 
