@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Conversion Calculator</title>
+</head>
+
+<body>
+  <h1>Unit Conversion Calculator</h1>
+  <h2>mm, cm, inch, foot, meter</h2>
+
+  <script>
+    let num = parseFloat(prompt("Enter Number")); // Use parseFloat for decimals
+    let unit = prompt("Enter Unit (mm, cm, inch, foot, meter)").toLowerCase();
+    let conversion = prompt("Convert to (mm, cm, inch, foot, meter)").toLowerCase();
+
+    let result;
+
+    if (unit === "mm") {
+      if (conversion === "cm") {
+        result = num / 10;
+      } else if (conversion === "inch") {
+        result = num / 25.4;
+      } else if (conversion === "foot") {
+        result = num / 304.8;
+      } else if (conversion === "meter") {
+        result = num / 1000;
+      }
+    } else if (unit === "cm") {
+      if (conversion === "mm") {
+        result = num * 10;
+      } else if (conversion === "inch") {
+        result = num / 2.54;
+      } else if (conversion === "foot") {
+        result = num / 30.48;
+      } else if (conversion === "meter") {
+        result = num / 100;
+      }
+    } else if (unit === "inch") {
+      if (conversion === "mm") {
+        result = num * 25.4;
+      } else if (conversion === "cm") {
+        result = num * 2.54;
+      } else if (conversion === "foot") {
+        result = num / 12;
+      } else if (conversion === "meter") {
+        result = num * 0.0254;
+      }
+    } else if (unit === "foot") {
+      if (conversion === "mm") {
+        result = num * 304.8;
+      } else if (conversion === "cm") {
+        result = num * 30.48;
+      } else if (conversion === "inch") {
+        result = num * 12;
+      } else if (conversion === "meter") {
+        result = num * 0.3048;
+      }
+    } else if (unit === "meter") {
+      if (conversion === "mm") {
+        result = num * 1000;
+      } else if (conversion === "cm") {
+        result = num * 100;
+      } else if (conversion === "inch") {
+        result = num / 0.0254;
+      } else if (conversion === "foot") {
+        result = num / 0.3048;
+      }
+    } else {
+      console.log("Invalid unit entered!");
+    }
+
+    if (result !== undefined) {
+      console.log(`${num} ${unit} is equal to ${result.toFixed(2)} ${conversion}`);
+    } else {
+      console.log("Invalid conversion!");
+    }
+
+  </script>
+</body>
+
+</html>

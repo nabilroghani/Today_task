@@ -11,7 +11,19 @@
 
 
   <script>
-
+    let user = parseInt(prompt("Enter Temperature "));
+    if (user >= 10 && user <= 20) {
+      alert("Take Jacket");
+    }
+    else if (user >= 21 && user <= 26) {
+      alert("Awesome Weather")
+    }
+    else if (user >= 27 && user <= 40) {
+      alert("Take Shower");
+    }
+    else {
+      alert("Wrong Temperature");
+    }
   </script>
 </body>
 
